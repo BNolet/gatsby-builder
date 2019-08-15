@@ -1,0 +1,12 @@
+version: '3'
+
+
+services:
+
+    gatsby-builder:
+        image: gatsby-builder
+        container_name: gatsby-builder
+        volumes: 
+            - ./hello-world:/src
+            - ./public:/public
+        env_file: .env
