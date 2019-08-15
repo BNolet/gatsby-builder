@@ -1,4 +1,4 @@
 public/
 src/
 hello-world/
-.env
+./.env
