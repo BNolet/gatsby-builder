@@ -1,6 +1,4 @@
-FROM node:10-alpine
-
-RUN apk add shadow
+FROM node:12-alpine
 
 RUN mkdir /script
 

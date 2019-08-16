@@ -7,6 +7,12 @@ services:
         image: gatsby-builder
         container_name: gatsby-builder
         volumes: 
-            - ./hello-world:/src
-            - ./public:/public
-        env_file: .env
+            - ./src:/src # `./src` Should be set to the directory your gatsby source is in
+            - ./public:/public # `./public` can be set to whatever directory you wish it to be
+        env_file: .env # create this file where you'll be running `docker-compose up` from
+                       # put inside the following:
+                       # USERID=<your-uid>
+                       # GROUPID=<your-gid>
+                       # You can find these values by entering `id -u` and `id -g` in your terminal
+                       # It's most likely that these values are both simply 1000 if you're the only
+                       # or first user on your system. 
