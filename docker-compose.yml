@@ -4,7 +4,7 @@ version: '3'
 services:
 
     gatsby-builder:
-        image: gatsby-builder
+        image: gatsby-builder:latest #1.0.1 as of this commit
         container_name: gatsby-builder
         volumes: 
             - ./src:/src # `./src` Should be set to the directory your gatsby source is in
